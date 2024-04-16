@@ -60,6 +60,17 @@ let sendMessage = async (e) => {
 
 }
 
+let addMessageToDom = (name, message) => {
+    let messagesWrapper = document.getElementById('messages')
+
+    let newMessage = `<div class="message__wrapper">
+                        <div class="message__body">
+                            <strong class="message__author">Dennis Ivy</strong>
+                            <p class="message__text">Does anyone know hen he will be back?</p>
+                        </div>
+                    </div>`
+}
+
 let leaveChannel = async () => {
     await channel.leave()
     await rtmClient.logout()
