@@ -65,13 +65,18 @@ let addMessageToDom = (name, message) => {
 
     let newMessage = `<div class="message__wrapper">
                         <div class="message__body">
-                            <strong class="message__author">Dennis Ivy</strong>
-                            <p class="message__text">Does anyone know hen he will be back?</p>
+                            <strong class="message__author">${name}</strong>
+                            <p class="message__text">${message}</p>
                         </div>
                     </div>`
 
 
     messagesWrapper.insertAdjacentHTML('beforeend', newMessage)
+
+    let lastMessage = document.querySelector('#messages .message__wrapper:last-child')
+    if(lastMessage){
+        lastMessage.scrollIntoView()
+    }
 }
 
 let leaveChannel = async () => {
