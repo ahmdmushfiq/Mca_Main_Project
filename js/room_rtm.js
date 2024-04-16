@@ -69,6 +69,9 @@ let addMessageToDom = (name, message) => {
                             <p class="message__text">Does anyone know hen he will be back?</p>
                         </div>
                     </div>`
+
+
+    messagesWrapper.insertAdjacentHTML('beforeend', newMessage)
 }
 
 let leaveChannel = async () => {
