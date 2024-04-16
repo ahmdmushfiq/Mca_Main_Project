@@ -55,7 +55,7 @@ let sendMessage = async (e) => {
 
     let message = e.target.message.value
     channel.sendMessage({text:JSON.stringify({'type':'chat', 'message':message, 'displayName':displayName})})
-
+    addMessageToDom(displayName, message)
     e.target.reset()
 
 }
